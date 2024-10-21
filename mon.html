@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propogation</title>
+</head>
+<body>
+<form action="" method="">
+    <input type="text" name="username" id="">
+    <!-- <input type="email" name="user" -->
+     
+</form>
+
+
+   <!-- <div id="grandparent"> grandparent
+    <div id="parent"> parent
+        <div id="child">
+            child
+        </div>
+    </div>
+   </div> -->
+   <script>
+
+
+
+
+
+//*********event bubbling*************//     == bottom to top
+    // let grand_ele=document.getElementById("grandparent")
+    // grand_ele.addEventListener("click",()=>{
+    //     console.log("hello from grand parent");
+    // });
+    // let parent_ele=document.getElementById("parent")
+    // parent_ele.addEventListener("dblclick",()=>{
+    //     console.log("hello from  parent");
+    // });
+    // let child=document.getElementById("child")
+    // child.addEventListener("click",()=>{
+    //     console.log("hello from child");
+    // });
+
+
+//***********event capturing====== top to buttom
+    // let grand_ele=document.getElementById("grandparent")
+    // grand_ele.addEventListener("click",()=>{
+    //     console.log("hello from grand parent while capturing ");
+    // },true);
+    // let parent_ele=document.getElementById("parent")
+    // parent_ele.addEventListener("click",()=>{
+    //     console.log("hello from  parent while capturing");
+    // },true);
+    // let child=document.getElementById("child")
+    // child.addEventListener("click",()=>{
+    //     console.log("hello from child while capturing");
+    // },true);
+
+    //stop propagration== parent and child //
+    //stopimmediate propagation= to control multiple handlers on the same element 
+    //e.preventDefault()= to stop the page from reloading
+
+    // let grand_ele=document.getElementById("grandparent")
+    // grand_ele.addEventListener("click",()=>{
+    //     console.log("hello from grand parent");
+    // });
+    // let parent_ele=document.getElementById("parent")
+    // parent_ele.addEventListener("click",(e)=>{
+    //     e.stopPropagation()
+    //     console.log("hello from  parent");
+    // });
+    // let child=document.getElementById("child")
+    // child.addEventListener("click",(event)=>{
+    //     event.stopimmediatePropagation()
+    //     console.log("hello from child");
+    // });
+    
+    // child.addEventListener("click",(event)=>{
+    //     event.stopimmediatePropagation()
+    //     console.log(" second hello from child");
+    // });
+    // child.addEventListener("click",(event)=>{
+    //     event.stopPropagation()
+    //     console.log(" third hello from child");
+    // });
+   </script>
+</body>
+</html>
